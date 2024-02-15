@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ASSESMENT.CSS">
+</head>
+
+<body>
+    <!-- header start  -->
+    <header>
+        <div class="container1">
+            <nav class="navb">
+                <img class="img" src="IMG/LOGO.png" alt="" height="80px">
+                <ul class="navbar">
+                    <li> Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+    </header>
+    </div>
+    <div class="Form-Wrapper">
+        <form action="" method="post">
+            <h3>---------Reservation---------</h3>
+
+            <label for="booking" id="bookig">Choice Of Booking :</label>
+            <select id="booking" onclick="Options()">
+                <option value="select">Select Your Choice</option>
+                <option value="fday">Full Day Booking</option>
+                <option value="hday">Half Day Booking</option>
+                <option value="hour">Hourly Booking</option>
+            </select><br /><br />
+
+            <label for="uname">User Name :</label>
+            <input type="text" placeholder="Enter Your Name"><br><br>
+
+            <label for="number">Mobile Number :</label>
+            <input type="number" /><br /><br />
+
+            <label for="email">Email :</label>
+            <input type="email" placeholder="Example@gmail.com" /><br /><br />
+
+            <label for="nperson">No Of Person :</label>
+            <input type="number" /><br /><br />
+
+            <label for="date" id="date">Date :</label>
+            <input type="date" id="date"><br /><br />
+
+            <label for="time" id="time">Time :</label>
+            <input type="time" id="time"><br /><br />
+
+            <label for="d&t" id="Datetime">Date & Time :</label>
+            <input type="datetime-local" id="Datetime"><br /><br />
+
+            <label for="" id="slot">Slot :</label>
+            <select id="slot">
+                <option value="1">Select Your Slot</option>
+                <option value="2">Breakfast</option>
+                <option value="3">Lunch</option>
+                <option value="4">Dinner</option>
+            </select><br /><br />
+
+            <button class="btn-2">Submit</button>
+        </form>
+    </div>
+    <script>
+        function Options() {
+          let booking = document.getElementById(booking).value;
+          let date = document.getElementById(date).value;
+          let time = document.getElementById(time).value;
+          let Datetime = document.getElementById(Datetime).value;
+          let slot = document.getElementById(slot).value;
+  
+          date.style.display="none";
+          time.style.display="none";
+          Datetime.style.display="none";
+          slot .style.display="none";
+  
+          if (booking === "fday") {
+              date.style.display = "block";
+          } else if (booking === "hday") {
+              date.style.display = "block";
+              slot.style.display = "block"
+            } else if (booking === "hour") {
+              date.style.display = "block";
+              time.style.display = "block";
+          }
+  
+          console.log(booking);
+          console.log(date);
+          console.log(time);
+          console.log(Datetime);
+          console.log(slot);
+        }
+      </script>
+
+</body>
+
+</html>
